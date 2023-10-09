@@ -3,7 +3,8 @@
 
 // Ahora puedes utilizar la variable 'data' en tu diagrama de barras
 
-
+const chart  = document.getElementById('chart')
+chart.innerHTML ='chao'
 const data = [
   { Estrato: "sin estrato", promedioPuntajeGlobal: 212 },
   { Estrato: "estrato 1", promedioPuntajeGlobal: 239 },
