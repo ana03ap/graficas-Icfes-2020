@@ -1,7 +1,10 @@
-fetch('http://localhost:3000/api/data')
+fetch('http://localhost:4000/api/data')
   .then(response => response.json())
   .then(data => {
     console.log(data);
+
+    console.log(data[0])
+    console.log(data[1])
     // const data = [
 //   { estrato: "sin estrato", valor: 212 },
 //   { estrato: "estrato 1", valor: 239 },
@@ -27,19 +30,19 @@ fetch('http://localhost:3000/api/data')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
 
-      console.log(data.map(d => d.Estrato))
+      console.log(data[0].map(d => d.Estrato))
     const xScale = d3.scaleBand()
-      .domain(data.map(d => d.Estrato))
+      .domain(data[0].map(d => d.Estrato))
       .range([0, width])
       .padding(0.1);
 
     const yScale = d3.scaleLinear()
-      .domain([0, d3.max(data, d => d.promedioPuntajeGlobal)])
+      .domain([0, d3.max(data[0], d => d.promedioPuntajeGlobal)])
       .nice()
       .range([height, 0]);
 
     svg.selectAll('.bar')
-      .data(data)
+      .data(data[0])
       .enter().append('rect')
       .attr('class', 'bar')
       .attr('x', d => xScale(d.Estrato))
