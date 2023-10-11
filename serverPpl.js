@@ -50,7 +50,8 @@ app.get('/api/data', (req, res) => {
       // aquí se escriben las queries que se vayna a hacer
       const queries = [
         'select Estrato, avg(punt_global) promedioPuntajeGlobal from dbo.datos group by Estrato  order by promedioPuntajeGlobal',
-        'select [Depto residencia Estd] ,avg(punt_global) promedioPuntaje  from dbo.datos group by [Depto residencia Estd]' 
+        'select [Depto residencia Estd] ,avg(punt_global) promedioPuntaje  from dbo.datos group by [Depto residencia Estd]' ,
+        "SELECT [Depto residencia Estd], AVG(punt_global) AS puntaje FROM dbo.datos WHERE [Depto residencia Estd] NOT IN ('extranjero', 'san andres') GROUP BY [Depto residencia Estd] ORDER BY [Depto residencia Estd] ASC"
 
         // Agrega más consultas aquí si es necesario
       ];

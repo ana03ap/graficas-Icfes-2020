@@ -1,0 +1,15 @@
+#chart{
+  background-color: aqua;
+}
+
+.bar {
+    fill: steelblue;
+  }
+  
+  .bar:hover {
+    cursor: pointer;
+    fill: orange;
+  }
+  
+
+  

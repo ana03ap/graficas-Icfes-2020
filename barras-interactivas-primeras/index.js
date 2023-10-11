@@ -5,15 +5,7 @@ fetch('http://localhost:4000/api/data')
 
     console.log(data[0])
     console.log(data[1])
-    // const data = [
-//   { estrato: "sin estrato", valor: 212 },
-//   { estrato: "estrato 1", valor: 239 },
-//   { estrato: "estrato 2", valor: 252 },
-//   { estrato: "estrato 3", valor: 263 },
-//   { estrato: "estrato 4", valor: 276 },
-//   { estrato: "estrato 5", valor: 264 },
-//   { estrato: "estrato 6", valor: 277 }
-// ];
+    console.log(data[2])
     console.log("hola desde cliente")
     // cuando la peticion a la api está funcionando
     const svgWidth = 800;
@@ -94,17 +86,6 @@ fetch('http://localhost:4000/api/data')
       .text('Puntajes');
 
 
-
-
-
-
-
-
-
-
-
-
-
   })
   // esto es si la peticion a la api no funciona
   .catch(error => {
@@ -112,13 +93,4 @@ fetch('http://localhost:4000/api/data')
   });
 
 
-// const data = [
-//   { estrato: "sin estrato", valor: 212 },
-//   { estrato: "estrato 1", valor: 239 },
-//   { estrato: "estrato 2", valor: 252 },
-//   { estrato: "estrato 3", valor: 263 },
-//   { estrato: "estrato 4", valor: 276 },
-//   { estrato: "estrato 5", valor: 264 },
-//   { estrato: "estrato 6", valor: 277 }
-// ];
 
