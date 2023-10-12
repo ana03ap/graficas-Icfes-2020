@@ -1,45 +1,39 @@
-    .mapa-colombia {
-    width: 80vh;
-    min-width: 360px;
-  }
+   .mapa-colombia {
+     position: relative;
+    /* width: 90vh;
+    min-width: 360px; */
+  } 
   
   .color-departamento-estandar {
     /* fill es equibalente a bacground-color */
-    fill: #8f8f8f;
+    fill: black;
     /* stroke es el color del borde */
     stroke: white;
   }
   
   .color-departamento-estandar:hover {
-    fill: #24bbcf;
+    fill: #0F664A;
     stroke: white;
   }
   
   .departamento-seleccionado{
-      fill: #17e6c3;
+      fill: #0F664A;
   }
-  
-  .container-mapas {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .info-departamento{
 
-    width: 100%;
-    height: 3pc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  #info-dep-avg{
+    background-color: bisque;
+    
+    border-radius: 3rem;
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50px;
+    left: 100px;
   }
-  
-  
-  .container-mapa-info img {
-    width: 100%;
-  }
-  
-  .container-mapa-info-oculto {
-    display: none;
+
+  #nombre-depa{
+    font-weight: bold;
+    width: 50%;
   }
   

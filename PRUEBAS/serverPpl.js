@@ -51,8 +51,7 @@ app.get('/api/data', (req, res) => {
       const queries = [
         'select Estrato, avg(punt_global) promedioPuntajeGlobal from dbo.datos group by Estrato  order by promedioPuntajeGlobal',
         'select [Depto residencia Estd] ,avg(punt_global) promedioPuntaje  from dbo.datos group by [Depto residencia Estd]' ,
-        "SELECT [Depto residencia Estd], AVG(punt_global) AS puntaje FROM dbo.datos WHERE [Depto residencia Estd] NOT IN ('extranjero', 'san andres') GROUP BY [Depto residencia Estd] ORDER BY [Depto residencia Estd] ASC"
-
+        
         // Agrega más consultas aquí si es necesario
       ];
   
@@ -100,7 +99,7 @@ app.get('/api/data', (req, res) => {
   
 
   // poner el puerto a escuchar las peticiones de index.js 
-const PORT = 4000;
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });

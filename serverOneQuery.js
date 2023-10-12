@@ -22,6 +22,9 @@ const config = {
   app.use(cors()); // Habilita CORS para todas las rutas
 // Endpoint para obtener datos desde la base de datos
 app.get('/api/data', (req, res) => {
+
+  let query = req.query.query;
+
   const connection = new Connection(config);
   connection.connect();
   
@@ -32,12 +35,12 @@ app.get('/api/data', (req, res) => {
       console.error("Error al conectar a la base de datos:", err.message);
       res.status(500).json({ error: 'Error de conexión a la base de datos' });
     } else {
-      executeStatement();
+      executeStatement(query);
     }
   });
 
-  function executeStatement() {
-    const request = new Request("select Estrato, avg(punt_global) promedioPuntajeGlobal from dbo.datos group by Estrato  order by promedioPuntajeGlobal", (err, rowCount) => {
+  function executeStatement(query) {
+    const request = new Request(query, (err, rowCount) => {
       if (err) {
         res.status(500).json({ error: 'Error al ejecutar la consulta' });
       } else {
@@ -59,7 +62,7 @@ app.get('/api/data', (req, res) => {
   }
 });
 
-const PORT = 3000;
+const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });

@@ -1,18 +1,18 @@
- query = 'select Estrato, avg(punt_global) promedioPuntajeGlobal from dbo.datos group by Estrato  order by promedioPuntajeGlobal';
 
-// Agrega el parámetro 'query' a la URL como una cadena de consulta
-url = `http://localhost:3001/api/data?query=${encodeURIComponent(query)}`;
-console.log('hola')
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
+// segundo.js
 
-    console.log(data);
+const data = [
+    { Estrato: "sin estrato", promedioPuntajeGlobal: 212 },
+    { Estrato: "estrato 1", promedioPuntajeGlobal: 239 },
+    { Estrato: "estrato 2", promedioPuntajeGlobal: 252 },
+    { Estrato: "estrato 3", promedioPuntajeGlobal: 263 },
+    { Estrato: "estrato 4", promedioPuntajeGlobal: 276 },
+    { Estrato: "estrato 5", promedioPuntajeGlobal: 264 },
+    { Estrato: "estrato 6", promedioPuntajeGlobal: 277 }
+  ];
 
-  
-    console.log("hola desde cliente")
-    // cuando la peticion a la api está funcionando
-    const svgWidth = 800;
+
+const svgWidth = 800;
     const svgHeight = 500;
     const margin = { top: 40, right: 30, bottom: 60, left: 60 };
     const width = svgWidth - margin.left - margin.right;
@@ -88,13 +88,3 @@ fetch(url)
       .attr('text-anchor', 'middle')
       .style('font-size', '14px')
       .text('Puntajes');
-
-
-  })
-  // esto es si la peticion a la api no funciona
-  .catch(error => {
-    console.error('Error al obtener datos:', error);
-  });
-
-
-
