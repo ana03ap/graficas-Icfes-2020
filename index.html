@@ -23,8 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Paytone+One&display=swap" rel="stylesheet">
 <!-- scripts -->
-  <script   src="barras-interactivas-primeras/index.js"></script>
-  <script src="mapa-de-colombia/index.js"></script>
+
 
 </head>
 
@@ -62,15 +61,22 @@
 
     <!-- DESDE AQUÍ SE ENCUENTRAN TODAS LAS GRÁFICAS -->
 
+
+      <!-- MAPA DE COLOMBIA PROMEDIO PUNTAJE GLOBAL POR DEPARTAMENTO -->
     <section id = 'promedio-por-depa'>
       <h1 id="titulo-promedio-por-depa" class ='title'>Promedio  de puntaje global por departamento</h1>
       <hr id="custom-hr">
       <div id="promedio-por-depa-ORDENADO">
+
+        <div id="texto-img-prom-depa">
+          <p id="texto-prom-depa" class = 'texto'>El análisis de los promedios por departamento revela desigualdades en la educación. Algunas regiones muestran puntajes promedio más bajos, lo que destaca la necesidad de abordar estas disparidades y garantizar una educación equitativa para todos los estudiantes.</p>
+          <img src="img/img2muñecos.png" alt="img2muñecos">
+        </div>
         <div class="mapa-colombia">
           <!-- <div class="info-departamento" class="container-mapa-info-oculto">
           </div> -->
           <div id ='info-dep-avg'>
-            <p id = 'nombre-depa'>Promedio del puntaje global por departamento</p>
+            <p id = 'nombre-depa' class = 'texto'>Promedio del puntaje global por departamento</p>
           </div>
           
           <svg
@@ -381,45 +387,57 @@
           </svg>
           
         </div>
-        <div id="texto-img-prom-depa">
-          <p id="texto-prom-depa" class = 'texto'>El análisis de los promedios por departamento revela desigualdades en la educación. Algunas regiones muestran puntajes promedio más bajos, lo que destaca la necesidad de abordar estas disparidades y garantizar una educación equitativa para todos los estudiantes.</p>
-          <img src="img/img2muñecos.png" alt="img2muñecos">
-        </div>
+        
       </div>
       
     </section>
     
 
-    <!-- MAPA DE COLOMBIA PROMEDIO PUNTAJE GLOBAL POR DEPARTAMENTO -->
-
-  
-
-
 
 <!-- PRIMER DIAGRAMA DE BARRAS INTERACTIVAS
     SOBRE PROMEDIO GLOBAL POR ESTRATOS-->
-  <div id="chart">
-  </div>
+
+    <section id="barras-estratos">
+      <h1 id="titulo-barras-estratos" class ='title'>¿Cómo influye el estrato en el resultado del ICFES?</h1>
+      <hr id="custom-hr">
+
+
+      <div id="barrasMasBotones">
+
+        <div id="chart">
+        </div>
+        
+        <div id="botones-chart">
+          <button id="sort-ascending" class="texto" class="btn-chart">Orden Ascendente</button>
+          <button id="sort-descending" class ='texto' class="btn-chart">Orden Descendente</button>
+        </div>
+      </div>
+      
+     
+
+    </section>
+  
+
+    <!-- DIAGRAMA CIRCULAR INGLÉS-->
+
+    <section id="circulo-ingles">
+      <h1 id="titulo-circulo-ingles" class ='title'>Nivel de inglés de los estudiantes que presentaron el ICFES 2020</h1>
+      <hr id="custom-hr">
+
+
+      
+    </section>
+
+
+
+
+
   </main>
 
 
 
-  <!-- <script  type="module"  src="probando.js"></script>
-  <script  type="module"  src="fetchPpl.js"></script>
-  <script  type="module" src="barras-interactivas-primeras/index2.js"></script>
-  <script  type="module" src="mapa-de-colombia/index.js"></script> -->
-
-  
-  <!-- <script   src="probando.js"></script> -->
-  
-  <!-- <script   src="barras-interactivas-primeras/index2.js"></script>
-  <script   src="mapa-de-colombia/index.js"></script> -->
-
-  <!-- <script type="module">
-    import { seleccionarDepartamento } from 'mapa-de-colombia/index.js';
-</script> -->
-
-
+  <script   src="barras-interactivas-primeras/index.js"></script>
+  <script src="mapa-de-colombia/index.js"></script>
 </body>
 
 </html>

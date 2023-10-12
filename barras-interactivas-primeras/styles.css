@@ -1,15 +1,18 @@
 #chart{
-  background-color: aqua;
+  border:5px solid aqua;
+  
 }
 
 .bar {
-    fill: steelblue;
+    fill: #0F664A;
   }
   
   .bar:hover {
     cursor: pointer;
-    fill: orange;
+    fill: #CCEABF;
   }
+  
+
   
 
   

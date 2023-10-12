@@ -1,25 +1,4 @@
 
-//  let query = 'select [Depto residencia Estd] ,avg(punt_global) promedioPuntaje  from dbo.datos group by [Depto residencia Estd]';
-
-// // Agrega el parámetro 'query' a la URL como una cadena de consulta
-// let url = `http://localhost:3001/api/data?query=${encodeURIComponent(query)}`;
-
-// let datos = []
-
-// fetch(url)
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log('desde mapas')
-//     console.log(data);
-
-//     datos = data
-//     console.log(datos)
-    
-//   })
-//   // esto es si la peticion a la api no funciona
-//   .catch(error => {
-//     console.error('Error al obtener datos:', error);
-//   });
 
 
 const datos = [
@@ -75,12 +54,17 @@ const datos = [
             // Muestra el puntaje en consola si hay una coincidencia
             console.log(`Puntaje global promedio en ${nombreDepartamento}: ${departamento.puntaje}`);
             depa.innerHTML = `Promedio en ${element.id} de ${departamento.puntaje}`
-            depa.style.fontWeight = 'bold';
+            depa.style.fontFamily = "Comfortaa, sans-serif";
+            depa.style.textAlign = 'center';
+            depa.style.paddingTop = '5px'
         }if( nombreDepartamento =='nariÃ±o' && idElemento =='nariño'){
             depa.innerHTML =`Promedio en ${element.id} de ${departamento.puntaje}`
-            depa.style.fontWeight = 'bold';
+            depa.style.fontFamily = "Comfortaa, sans-serif";
+            depa.style.textAlign = 'center';
+            depa.style.paddingTop = '5px'
+           
         }
-    
+        
     });
 
 
@@ -110,5 +94,3 @@ function seleccionarDepartamento(element,data) {
     element.classList.add("departamento-seleccionado");
     element.classList.remove("color-departamento-estandar");
 }
-
-

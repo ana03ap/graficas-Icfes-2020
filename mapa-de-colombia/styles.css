@@ -1,39 +1,41 @@
-   .mapa-colombia {
-     position: relative;
-    /* width: 90vh;
-    min-width: 360px; */
-  } 
-  
-  .color-departamento-estandar {
-    /* fill es equibalente a bacground-color */
-    fill: black;
-    /* stroke es el color del borde */
-    stroke: white;
-  }
-  
-  .color-departamento-estandar:hover {
-    fill: #0F664A;
-    stroke: white;
-  }
-  
-  .departamento-seleccionado{
-      fill: #0F664A;
-  }
+.mapa-colombia {
+  position: relative;
+ /* width: 90vh;
+ min-width: 360px; */
+} 
 
-  
-  #info-dep-avg{
-    background-color: bisque;
-    
-    border-radius: 3rem;
-    width: 50%;
-    margin: 0 auto;
-    position: absolute;
-    top: 50px;
-    left: 100px;
-  }
+.color-departamento-estandar {
+ /* fill es equibalente a bacground-color */
+ fill: black;
+ /* stroke es el color del borde */
+ stroke: white;
+}
 
-  #nombre-depa{
-    font-weight: bold;
-    width: 50%;
-  }
-  
+.color-departamento-estandar:hover {
+ fill: #0F664A;
+ stroke: white;
+}
+
+.departamento-seleccionado{
+   fill: #0F664A;
+}
+
+#info-dep-avg {
+ background-color: #CCEABF;
+ border-radius: 3rem;
+ width: 50%; /* Aumentando el ancho al 70% */
+ height: 3%;
+ margin: 0 auto;
+ position: absolute;
+ top: 18px;
+ left: 60px;
+ text-align: center;
+}
+
+#nombre-depa {
+
+font-weight: bold;
+font-size: 12px; /* Reducir el tamaño de fuente a 12px o el valor que se adapte mejor */
+text-align: center;
+margin-top: 5px;/* Aumentar el margen superior para mover el texto hacia abajo */
+}

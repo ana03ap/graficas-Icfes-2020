@@ -1,83 +1,88 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    outline: none;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
 }
 
-body{
-  background-color: blueviolet;
+body {
+  background-color: beige;
 }
 
 /* HEADER */
 
-  header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #CCEABF;
-    height: 5pc;
-  }
-
-  #header-izquierda{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-left: 30px;
-    gap: 20px;
-  }
-
-  #texto-header-izquierda{
-    font-family: 'Sirin Stencil', sans-serif;
-    font-size: 50px;
-    color : #149D3F;
-  }
-  
-
-  #logoVerde{
-    width: 60px;
-    height: 60px;
-  }
-
-  #header-derecha{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-right: 30px;
-    padding-top: 10px;
-  }
-  
-  #logoIcfes{
-    width: 160px;
-    height: 60px;
-  }
-
-  
-/* MAIN */
-.title{
-  font-family: 'Paytone One', sans-serif;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #CCEABF;
+  height: 5pc;
 }
 
-.texto{
+#header-izquierda {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 30px;
+  gap: 20px;
+}
+
+#texto-header-izquierda {
+  font-family: 'Sirin Stencil', sans-serif;
+  font-size: 50px;
+  color: #149D3F;
+}
+
+
+#logoVerde {
+  width: 60px;
+  height: 60px;
+}
+
+#header-derecha {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+#logoIcfes {
+  width: 160px;
+  height: 60px;
+}
+
+
+/* MAIN */
+.title {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.texto {
   font-family: 'Comfortaa', sans-serif;
 }
-  
- 
-/* SECTION DEL BACKGROUND DEL ICFES */
 
-#texto-bg-icfes{
-  color : #CCEABF;
+
+/* SECTION DEL BACKGROUND DEL ICFES */
+#texto-bg-icfes {
+  color: #CCEABF;
   font-size: 85px;
   text-align: center;
 }
 
-#bg-icfes{
+#bg-icfes {
   height: 40pc;
-  background-image: url('img/imgDeFondo.png'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen */
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center center; /* Centra la imagen en el contenedor */
+  background-image: url('img/imgDeFondo.png');
+  /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover;
+  /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-position: center center;
+  /* Centra la imagen en el contenedor */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,76 +91,118 @@ body{
 
 /* SECTION IMPORTANCIA */
 
-#importancia{
+#importancia {
   background-color: beige;
   padding-bottom: 20px;
 }
 
-#title-importancia{
-color : #18601C;
-padding: 30px 50px ;
-font-size: 30px;
+#title-importancia {
+  color: #18601C;
+  padding: 40px 50px;
+  font-size: 40px;
 }
 
-#texto-imagen{
-  padding: 20px;
+#texto-imagen {
+  padding: 2px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 40px;
+  gap: 150px;
   font-size: 20px;
-}
-#parrafo-importancia{
-  width: 35%;
-  text-align: justify;
+  margin-bottom: 10px
 }
 
-#img-importancia{
-  width: 20pc;
-  height: 20pc;
+
+#parrafo-importancia {
+  width: 35%;
+}
+
+#img-importancia {
+  width: 30pc;
+  height: 30pc;
 }
 
 
 /* SECTION DEL MAPA DE COLOMBIA */
 
-#titulo-promedio-por-depa{
-  color : #18601C;
-  padding: 30px 50px ;
+
+#titulo-promedio-por-depa {
+  color: #18601C;
+  padding: 30px 40px;
   font-size: 45px;
   text-align: CENTER;
   padding-left: 250px;
   padding-right: 250px;
-  }
-
-  #custom-hr{
-    width: 90%; /* Establece el ancho del hr al 80% del contenedor padre */
-    margin: 0 auto; /* Centra el hr horizontalmente en la página */
-    border: 1px solid #18601C; 
-  }
-
-  #promedio-por-depa-ORDENADO{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  #texto-img-prom-depa{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-  }
-
-  #texto-prom-depa{
-    font-size: 25px;
-    text-align: center;
-  }
+}
 
 
+#custom-hr {
+  width: 90%;
+  /* Establece el ancho del hr al 80% del contenedor padre */
+  margin: 0 auto; /* Centra el hr horizontalmente en la página */
+  border: 2px solid #18601C;
+}
 
-  #texto-prom-depa{
-    width: 50%;
-  }
-  a {
-    cursor: pointer;
-  }
+#promedio-por-depa-ORDENADO {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#texto-img-prom-depa {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#texto-prom-depa {
+  font-size: 25px;
+  text-align: center;
+  width: 70%;
+}
+
+
+
+/* SECTION BARRAS ESTRATOS */
+
+#titulo-barras-estratos{
+  color: #18601C;
+  padding: 30px 40px;
+  font-size: 45px;
+  text-align: CENTER;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+#barrasMasBotones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:50px;
+}
+
+
+#botones-chart{
+  display: flex;
+  border: 1px solid red;
+  width: 50%;
+  justify-content: center;
+  gap: 100px;
+}
+
+
+/* CIRCULO INGLÉS */
+#titulo-circulo-ingles{
+  color: #18601C;
+  padding: 30px 40px;
+  font-size: 45px;
+  text-align: CENTER;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+a {
+  cursor: pointer;
+}
