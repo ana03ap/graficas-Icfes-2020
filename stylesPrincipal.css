@@ -203,6 +203,45 @@ header {
   padding-right: 250px;
 }
 
+
+/* CSS DE FOOTER */
+
+
+
+footer{
+  background-color: #18601C;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px 5px 10px;
+}
+#footer-izquierda{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+#ruta-img{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#texto-footer-izquierda{
+  font-family: 'Sirin Stencil', sans-serif;
+  font-size: 30px;
+  color: #149D3F
+}
+
+#logoVerde-footer{
+  width: 30px;
+  height: 30px;
+}
+
+
+#footer-izquierda p, #footer-derecha p{
+  color: #4BB966;
+}
+
+
+
 a {
   cursor: pointer;
 }

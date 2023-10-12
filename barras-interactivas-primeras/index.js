@@ -208,9 +208,9 @@ function createBarChart(selectedData) {
   const chartContainer = d3.select("#chart");
   chartContainer.selectAll('*').remove(); //inicializa todo, un clear 
 
-  const svgWidth = 800;
+  const svgWidth = 900;
   const svgHeight = 600;
-  const margin = { top: 40, right: 30, bottom: 60, left: 60 };
+  const margin = { top: 20, right: 30, bottom: 60, left: 60 };
   const width = svgWidth - margin.left - margin.right;
   const height = svgHeight - margin.top - margin.bottom;
 
@@ -271,7 +271,7 @@ function createBarChart(selectedData) {
   
   svg.append('text')
     .attr('x', width / 2)
-    .attr('y', height + margin.bottom )
+    .attr('y', height + margin.bottom+0.2 )
     .attr('text-anchor', 'middle')
     .style('font-size', '20px')  
     
