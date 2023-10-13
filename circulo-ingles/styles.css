@@ -9,6 +9,8 @@
     grid-template-rows: repeat(5,1fr);
   }
 
+
+
   .color-CI{
     padding: 15px;
     border-radius: 50%;
@@ -17,9 +19,10 @@
 
   #uno-CI, #dos-CI, #tres-CI, #cuatro-CI, #cinco-CI{
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 30px;
+    width: 70%;
+    padding-left: 45%;
   }
 
 

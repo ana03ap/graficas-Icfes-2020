@@ -8,6 +8,7 @@ fetch(url)
   .then(data => {
     console.log("hola desde circulo en ingles")
     console.log(data);
+    
     const color1 = document.getElementById("txt-uno-CI");
     const color2 = document.getElementById("txt-dos-CI");
     const color3 = document.getElementById("txt-tres-CI");
@@ -29,7 +30,7 @@ function normal(){
   cuatro.style.transform='scale(1.0)';
   cinco.style.transform='scale(1.0)';
 }
-
+  
     const niveles = Object.keys(data[0]);
 
     color1.innerHTML = `${niveles[0]} No de Personas ${data[0][niveles[0]]}`;

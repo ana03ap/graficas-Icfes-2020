@@ -1,20 +1,20 @@
-#chart{
-    padding-top: 20px;
-  
+#chart-genero{
+    padding-left: 15%;
   }
   
   .barf{
-      fill: #3c0f66;
+      fill: #b78edd;
       
     }
 
 .barm{
-        fill: #06492d;
-        
+        fill: #5aa888;  
     }
     
   
-    
+    #barras-genero{
+      padding-bottom: 3pc;
+    }
   
     #botones-chart{
       display: flex;
@@ -24,13 +24,26 @@
     }
     
     #mujer, #hombre {
-      width: 100px;
-      height: 200px;
+      width: 150px;
+      height: 250px;
 
     }
     
     #mujer:hover, #hombre:hover {
       cursor: pointer;
+    }
+
+    #barrasGeneroMasBotones{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    #btn-wm-m{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding-right: 50%;
     }
   
  

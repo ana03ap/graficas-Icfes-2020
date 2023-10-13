@@ -1,4 +1,4 @@
-query = "Select d.[Genero Estd], avg(d.punt_c_naturales) as PromedioCiencias, avg(d.punt_ingles) as PromedioIngles, avg(d.punt_lectura_critica) as PromedioLecturaC,avg(d.punt_matematicas) as PromedioMath, avg(d.punt_sociales_ciudadanas) as PromedioSocialesC, avg(d.punt_global) as PromedioPuntGlobal from datos d group by d.[Genero Estd] "
+query = "Select d.[Genero Estd], avg(d.punt_c_naturales) as ciencias, avg(d.punt_ingles) as Ingles, avg(d.punt_lectura_critica) as Lectura,avg(d.punt_matematicas) as Math, avg(d.punt_sociales_ciudadanas) as Sociales, avg(d.punt_global) as global from datos d group by d.[Genero Estd] "
 
 // Agrega el parámetro 'query' a la URL como una cadena de consulta
  url = `http://localhost:3003/api/data?query=${encodeURIComponent(query)}`;
@@ -10,25 +10,61 @@ fetch(url)
     
     // let womenData=[data[0]] 
     // let menData= [data[1]]
-    let  womenData =  [
-         { Estrato: "sin estrato", promedioPuntajeGlobal: 230 },
-           { Estrato: "estrato 1", promedioPuntajeGlobal: 239 },
-           { Estrato: "estrato 2", promedioPuntajeGlobal: 252 },
-           { Estrato: "estrato 3", promedioPuntajeGlobal: 263 },
-           { Estrato: "estrato 4", promedioPuntajeGlobal: 276 },
-           { Estrato: "estrato 5", promedioPuntajeGlobal: 264 },
-           { Estrato: "estrato 6", promedioPuntajeGlobal: 277 },
-        ];
+    // const arrayGenero = [
+    //   {
+    //     'Genero Estd': 'f',
+    //     PromedioCiencias: 48,
+    //     PromedioIngles: 47,
+    //     PromedioLecturaC: 52,
+    //     PromedioMath: 50,
+    //     PromedioSocialesC: 48,
+    //     PromedioPuntGlobal: 248
+    //   },
+    //   {
+    //     'Genero Estd': 'm',
+    //     PromedioCiencias: 49,
+    //     PromedioIngles: 48,
+    //     PromedioLecturaC: 52,
+    //     PromedioMath: 53,
+    //     PromedioSocialesC: 49,
+    //     PromedioPuntGlobal: 255
+    //   }
+    // ]
 
-        let  menData =  [
-            { Estrato: "sin estratqo", promedioPuntajeGlobal: 230 },
-            { Estrato: "estrato 1", promedioPuntajeGlobal: 239 },
-            { Estrato: "estrato 2", promedioPuntajeGlobal: 252 },
-            { Estrato: "estrato 3", promedioPuntajeGlobal: 263 },
-            { Estrato: "estrato 4", promedioPuntajeGlobal: 276 },
-            { Estrato: "estrato 5", promedioPuntajeGlobal: 264 },
-            { Estrato: "estrato 6", promedioPuntajeGlobal: 277 },
-            ];
+    let womenData = Object.entries(data[0]).map(([Materia, promedio]) => ({
+      Materia: Materia,
+      promedio: promedio
+    })).slice(1, -1);; 
+    
+    console.log(womenData);
+
+    let menData = Object.entries(data[1]).map(([Materia, promedio]) => ({
+      Materia: Materia,
+      promedio: promedio
+    })).slice(1, -1);; 
+    
+    console.log(menData);
+
+
+    // let  womenData =  [
+    //      { Estrato: "sin estrato", promedioPuntajeGlobal: 230 },
+    //        { Estrato: "estrato 1", promedioPuntajeGlobal: 239 },
+    //        { Estrato: "estrato 2", promedioPuntajeGlobal: 252 },
+    //        { Estrato: "estrato 3", promedioPuntajeGlobal: 263 },
+    //        { Estrato: "estrato 4", promedioPuntajeGlobal: 276 },
+    //        { Estrato: "estrato 5", promedioPuntajeGlobal: 264 },
+    //        { Estrato: "estrato 6", promedioPuntajeGlobal: 277 },
+    //     ];
+
+    //     let  menData =  [
+    //         { Estrato: "sin estratqo", promedioPuntajeGlobal: 230 },
+    //         { Estrato: "estrato 1", promedioPuntajeGlobal: 239 },
+    //         { Estrato: "estrato 2", promedioPuntajeGlobal: 252 },
+    //         { Estrato: "estrato 3", promedioPuntajeGlobal: 263 },
+    //         { Estrato: "estrato 4", promedioPuntajeGlobal: 276 },
+    //         { Estrato: "estrato 5", promedioPuntajeGlobal: 264 },
+    //         { Estrato: "estrato 6", promedioPuntajeGlobal: 277 },
+    //         ];
         
     console.log(womenData)
         function createBarChart(selectedData,namebar) {
@@ -49,12 +85,12 @@ fetch(url)
                 .attr('transform', `translate(${margin.left},${margin.top})`);
 
             const xScale = d3.scaleBand()
-                .domain(selectedData.map(d => d.Estrato))
+                .domain(selectedData.map(d => d.Materia))
                 .range([0, width])
                 .padding(0.1);
 
             const yScale = d3.scaleLinear()
-                .domain([0, d3.max(selectedData, d => d.promedioPuntajeGlobal)])
+                .domain([0, d3.max(selectedData, d => d.promedio)])
                 .nice()
                 .range([height, 0]);
 
@@ -63,7 +99,7 @@ fetch(url)
                 .data(selectedData)
                 .enter().append('rect')
                 .attr('class', `${namebar}`)
-                .attr('x', d => xScale(d.Estrato))
+                .attr('x', d => xScale(d.Materia))
                 .attr('y', height)
                 .attr('width', xScale.bandwidth())
                 .attr('height', 0)
@@ -76,8 +112,8 @@ fetch(url)
                 })
                 .transition()
                 .duration(1000)  // duración de la transición en milisegundos
-                .attr('y', d => yScale(d.promedioPuntajeGlobal))
-                .attr('height', d => height - yScale(d.promedioPuntajeGlobal));
+                .attr('y', d => yScale(d.promedio))
+                .attr('height', d => height - yScale(d.promedio));
 
             svg.append('g')
                 .attr('class', 'x-axis')
@@ -92,13 +128,13 @@ fetch(url)
                 .call(d3.axisLeft(yScale));
 
 
-            svg.append('text')
-              .attr('x', width / 2)
-              .attr('y', height + margin.bottom+0.2 )
-              .attr('text-anchor', 'middle')
-              .style('font-size', '20px')  
+            // svg.append('text')
+            //   .attr('x', width / 2)
+            //   .attr('y', height + margin.bottom+0.2 )
+            //   .attr('text-anchor', 'middle')
+            //   .style('font-size', '20px')  
               
-              .text('Estrato');
+            //   .text('Materia');
 
             svg.append('text')
                 .attr('transform', 'rotate(-90)')

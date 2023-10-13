@@ -6,9 +6,15 @@
   outline: none;
 }
 
+html{
+  overflow-anchor: hidden;
+}
 body {
   background-color: beige;
+  
 }
+
+
 
 /* HEADER */
 
@@ -63,6 +69,13 @@ header {
 
 .texto {
   font-family: 'Comfortaa', sans-serif;
+}
+
+#custom-hr {
+  width: 90%;
+  /* Establece el ancho del hr al 80% del contenedor padre */
+  margin: 0 auto; /* Centra el hr horizontalmente en la página */
+  border: 2px solid #18601C;
 }
 
 
@@ -136,12 +149,7 @@ header {
 }
 
 
-#custom-hr {
-  width: 90%;
-  /* Establece el ancho del hr al 80% del contenedor padre */
-  margin: 0 auto; /* Centra el hr horizontalmente en la página */
-  border: 2px solid #18601C;
-}
+
 
 #promedio-por-depa-ORDENADO {
   display: grid;
@@ -225,7 +233,6 @@ padding-top: 2%;
 
 /* DONUT */
 
-
 #titulo-cant-people-puntaje{
   color: #18601C;
   padding: 30px 40px;
@@ -235,9 +242,21 @@ padding-top: 2%;
   padding-right: 250px;
 }
 
+
+/* MUJER Y HOMBRE */
+
+#titulo-barras-genero{
+  color: #18601C;
+  padding: 30px 40px;
+  font-size: 45px;
+  text-align: CENTER;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+
+
 /* CSS DE FOOTER */
-
-
 
 footer{
   background-color: #18601C;

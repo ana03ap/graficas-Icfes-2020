@@ -1,4 +1,61 @@
 #chart-donut{
     width :100%;
-    height :500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
 }
+
+#info-chart-donut{
+    position: absolute;
+    top: 40%; 
+    left: 48%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-dona{
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+
+  #uno-dona, #dos-dona, #tres-dona, #cuatro-dona, #cinco-dona, #seis-dona, #siete-dona, #ocho-dona{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+   
+  }
+
+
+  #color-1-dona{
+    background-color:#3FE0d0 ;
+  }
+  #color-2-dona{
+    background-color:#7ef9ff ;
+  }
+
+  #color-3-dona{
+    background-color:#4397a3;
+  }
+
+  #color-4-dona{
+    background-color:#588bae;
+  }
+
+  #color-5-dona{
+    background-color:#6593f5;
+  }
+  #color-6-dona{
+    background-color:#7285a5;
+  }
+  #color-7-dona{
+    background-color:#0e4d92;
+  }
+  #color-8-dona{
+    background-color:#021830;
+  }
