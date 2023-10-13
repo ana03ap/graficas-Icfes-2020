@@ -1,6 +1,3 @@
-
-
-
 const datos = [
     { 'Depto residencia Estd': 'amazonas', puntaje: 229 },
     { 'Depto residencia Estd': 'antioquia', puntaje: 247 },
@@ -87,10 +84,45 @@ function seleccionarDepartamento(element,data) {
         yaSeleccionado[0].classList.remove("departamento-seleccionado");
     }
 
+
+
+        query = 'select [Depto residencia Estd] ,avg(punt_global) promedioPuntaje  from dbo.datos group by [Depto residencia Estd]';
+
+        // Agrega el parámetro 'query' a la URL como una cadena de consulta
+        url = `http://localhost:3003/api/data?query=${encodeURIComponent(query)}`;
+
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            console.log("hola desde mapa")
+            console.log(data);
+
+            // setTimeout(function() {
+            //   mostrarOcultarDetalleDepartamento(element,data);
+            // }, 3000);
+            
+            mostrarOcultarDetalleDepartamento(element,data);
+          })
+          // SI LA PETICION NO FUNCIONA 
+          .catch(error => {
+            console.error('Error al obtener datos:', error);
+          });
+
+
     
-        mostrarOcultarDetalleDepartamento(element,data);
+        
     
     
     element.classList.add("departamento-seleccionado");
     element.classList.remove("color-departamento-estandar");
 }
+
+
+
+
+
+
+  
+ 
+
+  //EL FETCH NO FUNCIONA!!! ARREGLALO

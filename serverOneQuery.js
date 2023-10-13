@@ -35,7 +35,7 @@ app.get('/api/data', (req, res) => {
       console.error("Error al conectar a la base de datos:", err.message);
       res.status(500).json({ error: 'Error de conexión a la base de datos' });
     } else {
-      console.log(executing)
+     
       executeStatement(query);
     }
   });
@@ -69,7 +69,7 @@ app.get('/api/data', (req, res) => {
   console.log(data)
 });
 
-const PORT = 3001;
+const PORT = 3003;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });

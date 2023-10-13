@@ -1,0 +1,40 @@
+#chart{
+    padding-top: 20px;
+  
+  }
+  
+  .barf{
+      fill: #3c0f66;
+      
+    }
+
+.barm{
+        fill: #06492d;
+        
+    }
+    
+  
+    
+  
+    #botones-chart{
+      display: flex;
+      width: 50%;
+      justify-content: center;
+      gap: 100px;
+    }
+    
+    #mujer, #hombre {
+      width: 100px;
+      height: 200px;
+
+    }
+    
+    #mujer:hover, #hombre:hover {
+      cursor: pointer;
+    }
+  
+ 
+  
+  
+
+    

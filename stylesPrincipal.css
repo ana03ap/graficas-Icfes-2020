@@ -202,6 +202,12 @@ header {
 
 
 /* BARRAS COLEGIO PUBLICO O PRIVADO */
+
+#prom-colegio div{
+display: flex;
+justify-content: center;
+padding-top: 2%;
+}
 #titulo-prom-colegio{
   color: #18601C;
   padding: 30px 40px;
@@ -209,6 +215,11 @@ header {
   text-align: CENTER;
   padding-left: 250px;
   padding-right: 250px;
+}
+
+#texto-prom-colegio{
+  width: 70%;
+  text-align: center;
 }
 
 

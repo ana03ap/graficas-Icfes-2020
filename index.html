@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="barras-interactivas-primeras/styles.css">
   <link rel="stylesheet" href="stylesPrincipal.css">
   <link rel="stylesheet" href="circulo-ingles/styles.css">
-
+  <link rel="stylesheet" href="colegios/styles.css">
+  <link rel="stylesheet" href="mujer-hombre/styles.css">
                     <!-- FONTS -->
 <!-- header -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -437,8 +438,37 @@
       <hr id="custom-hr">
 
       <div id="chart-ingles">
+        <div id="info-chart-ingles">
 
+          <div id="uno-CI" >
+            <div id="color-1-CI"  class="color-CI"></div>
+            <p class ='texto' id="txt-uno-CI"></p>
+          </div>
+
+          <div id="dos-CI" >
+            <div id="color-2-CI" class="color-CI"></div>
+            <p class ='texto' id="txt-dos-CI"></p>
+          </div>
+
+          <div id="tres-CI" >
+            <div  id="color-3-CI" class="color-CI"></div>
+            <p class ='texto' id="txt-tres-CI"></p>
+          </div>
+
+          <div id="cuatro-CI" >
+            <div id="color-4-CI" class="color-CI"></div>
+            <p class ='texto' id="txt-cuatro-CI"></p>
+          </div>
+
+          <div id="cinco-CI" >
+            <div id="color-5-CI" class="color-CI"></div>
+            <p class ='texto' id="txt-cinco-CI" ></p>
+          </div>
+
+
+        </div>
       </div>
+      
       
     </section>
 
@@ -447,7 +477,15 @@
     <section id="prom-colegio">
       <h1 id="titulo-prom-colegio" class ='title'>¿Influye en el promedio de puntajes la naturaleza del colegio del estudiante?</h1>
       <hr id="custom-hr">
-      <p id ='texto-prom-colegio' class = 'texto'>La naturaleza del colegio (oficial, no oficial) puede influir en los puntajes de los estudiantes en las pruebas. Los colegios privados, con más recursos y clases más pequeñas, pueden brindar ventajas en el rendimiento académico. Un análisis completo debe considerar múltiples factores para comprender completamente el rendimiento estudiantil.</p>
+
+      <div>
+        <p id ='texto-prom-colegio' class = 'texto'>La naturaleza del colegio (oficial, no oficial) puede influir en los puntajes de los estudiantes en las pruebas. Los colegios privados, con más recursos y clases más pequeñas, pueden brindar ventajas en el rendimiento académico. Un análisis completo debe considerar múltiples factores para comprender completamente el rendimiento estudiantil.</p>
+      </div>
+
+      <div id="chart-colegios">
+       
+      </div>
+      
     </section>
 
 
@@ -455,20 +493,41 @@
 <section id="cant-people-puntaje">
   <h1 id="titulo-cant-people-puntaje" class ='title'>Cantidad de personas por rango de puntajes globales</h1>
   <hr id="custom-hr">
-  <div id="chart-donut">
-  </div>
+  
 
-  <div id="info-chart-donut">
-    <div id="primer-dato-donut">
-      <div id="color-primero-donut">
+  
+    <div id="chart-donut">
 
+      <div id="primer-dato-donut">
+        <div id="color-primero-donut">
+  
+        </div>
+        
       </div>
-      
     </div>
-  </div>
-
+    
 </section>
    
+
+<!-- BARRAS MUJERES Y HOMBRES -->
+<section id="barras-genero">
+  <h1 id="titulo-barras-genero" class ='title'>Diferencias de rendimiento por Género en las Pruebas Saber ICFES</h1>
+  <hr id="custom-hr">
+  <div id="barrasGeneroMasBotones">
+    
+    <div id="chart-genero">
+    </div>
+    
+    <div id="btn-wm-m">
+      <img id ='mujer'src="img/mujer.png" alt="mujer">
+      <img id ='hombre' src="img/hombre.png" alt="mujer">
+    </div>
+  </div>
+  
+ 
+
+</section>
+
 
   </main>
 
@@ -497,6 +556,8 @@
   <script src="mapa-de-colombia/index.js"></script>
   <script src="circulo-ingles/index.js"></script>
   <script src="donut/index.js"></script>
+  <script src="colegios/index.js"></script>
+  <script src="mujer-hombre/index.js"></script>
 </body>
 
 </html>
