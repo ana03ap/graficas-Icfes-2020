@@ -176,6 +176,7 @@ header {
 }
 
 #barrasMasBotones{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,13 +185,8 @@ header {
 }
 
 
-#botones-chart{
-  display: flex;
-  border: 1px solid red;
-  width: 50%;
-  justify-content: center;
-  gap: 100px;
-}
+
+
 
 
 /* CIRCULO INGLÉS */
@@ -203,6 +199,30 @@ header {
   padding-right: 250px;
 }
 
+
+
+/* BARRAS COLEGIO PUBLICO O PRIVADO */
+#titulo-prom-colegio{
+  color: #18601C;
+  padding: 30px 40px;
+  font-size: 45px;
+  text-align: CENTER;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+
+/* DONUT */
+
+
+#titulo-cant-people-puntaje{
+  color: #18601C;
+  padding: 30px 40px;
+  font-size: 45px;
+  text-align: CENTER;
+  padding-left: 250px;
+  padding-right: 250px;
+}
 
 /* CSS DE FOOTER */
 

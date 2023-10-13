@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="mapa-de-colombia/styles.css">
   <link rel="stylesheet" href="barras-interactivas-primeras/styles.css">
   <link rel="stylesheet" href="stylesPrincipal.css">
+  <link rel="stylesheet" href="circulo-ingles/styles.css">
 
                     <!-- FONTS -->
 <!-- header -->
@@ -403,6 +404,17 @@
 
 
       <div id="barrasMasBotones">
+        
+      
+        <div class="popUp-be">
+            <h2>Detalles</h2>
+            <div id="infopopUp-be">
+                <p id="txt-infopopUp-be" class = 'texto'></p>
+                <div id="btnClose-popUp" class ='texto' >oki!</div>
+            </div>
+            
+        </div>
+
 
         <div id="chart">
         </div>
@@ -424,15 +436,39 @@
       <h1 id="titulo-circulo-ingles" class ='title'>Nivel de inglés de los estudiantes que presentaron el ICFES 2020</h1>
       <hr id="custom-hr">
 
+      <div id="chart-ingles">
 
+      </div>
       
     </section>
 
 
 
+    <section id="prom-colegio">
+      <h1 id="titulo-prom-colegio" class ='title'>¿Influye en el promedio de puntajes la naturaleza del colegio del estudiante?</h1>
+      <hr id="custom-hr">
+      <p id ='texto-prom-colegio' class = 'texto'>La naturaleza del colegio (oficial, no oficial) puede influir en los puntajes de los estudiantes en las pruebas. Los colegios privados, con más recursos y clases más pequeñas, pueden brindar ventajas en el rendimiento académico. Un análisis completo debe considerar múltiples factores para comprender completamente el rendimiento estudiantil.</p>
+    </section>
 
 
 
+<section id="cant-people-puntaje">
+  <h1 id="titulo-cant-people-puntaje" class ='title'>Cantidad de personas por rango de puntajes globales</h1>
+  <hr id="custom-hr">
+  <div id="chart-donut">
+  </div>
+
+  <div id="info-chart-donut">
+    <div id="primer-dato-donut">
+      <div id="color-primero-donut">
+
+      </div>
+      
+    </div>
+  </div>
+
+</section>
+   
 
   </main>
 
@@ -459,6 +495,8 @@
 
   <script   src="barras-interactivas-primeras/index.js"></script>
   <script src="mapa-de-colombia/index.js"></script>
+  <script src="circulo-ingles/index.js"></script>
+  <script src="donut/index.js"></script>
 </body>
 
 </html>

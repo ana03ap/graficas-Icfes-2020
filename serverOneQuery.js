@@ -35,6 +35,7 @@ app.get('/api/data', (req, res) => {
       console.error("Error al conectar a la base de datos:", err.message);
       res.status(500).json({ error: 'Error de conexión a la base de datos' });
     } else {
+      console.log(executing)
       executeStatement(query);
     }
   });
@@ -43,8 +44,11 @@ app.get('/api/data', (req, res) => {
     const request = new Request(query, (err, rowCount) => {
       if (err) {
         res.status(500).json({ error: 'Error al ejecutar la consulta' });
+        console.log(err)
       } else {
+        console.log(data)
         res.json(data);
+        
         connection.close();
       }
     });
@@ -56,10 +60,13 @@ app.get('/api/data', (req, res) => {
         rowData[column.metadata.colName] = column.value;
       });
       data.push(rowData);
+      console.log(data)
     });
 
     connection.execSql(request);
   }
+
+  console.log(data)
 });
 
 const PORT = 3001;

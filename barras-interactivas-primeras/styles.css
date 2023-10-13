@@ -1,6 +1,6 @@
 #chart{
   padding-top: 20px;
-  border:1px solid aqua;
+
 }
 
 .bar {
@@ -14,6 +14,66 @@
   }
   
 
+  #botones-chart{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  #sort-ascending, #sort-descending{
+    border-radius: 3rem;
+    padding: 5px 10px  ;
+    background-color: transparent;
+    border: 1px solid black; 
+    font-size: 20px;
+  }
+  
+  #sort-ascending:hover, #sort-descending:hover , #btnClose-popUp{
+    cursor: pointer;
+  }
+
+  /* POP UP  */
+.popUp-be {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(132, 206, 89, 0.849);
+  border:2px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.popUpOn {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+
+
+#infopopUp-be{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#btnClose-popUp{
+  border: 1px black solid;
+  padding: 2px 4px;
+  border-radius: 2rem;
+  font-weight: bold;
+}
   
 
   

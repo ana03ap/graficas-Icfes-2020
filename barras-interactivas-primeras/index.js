@@ -204,6 +204,9 @@ const data = [
   { Estrato: "estrato 6", promedioPuntajeGlobal: 277 },
 ];
 
+const popUp = document.querySelector('.popUp-be')
+const close = document.querySelector('#btnClose-popUp')
+const texto = document.querySelector('#txt-infopopUp-be')
 function createBarChart(selectedData) {
   const chartContainer = d3.select("#chart");
   chartContainer.selectAll('*').remove(); //inicializa todo, un clear 
@@ -242,7 +245,11 @@ function createBarChart(selectedData) {
       .attr('height', 0)
       .attr('fill', 'steelblue')
       .on('click', function (event, d) {
-          alert(`Estrato: ${d.Estrato}, Promedio: ${d.promedioPuntajeGlobal}`);
+        popUp.classList.toggle('popUpOn')
+        texto.innerHTML=  `Estrato: ${d.Estrato}, Promedio: ${d.promedioPuntajeGlobal}`
+          // alert(`Estrato: ${d.Estrato}, Promedio: ${d.promedioPuntajeGlobal}`);
+
+
       })
       .transition()
       .duration(1000)  // duración de la transición en milisegundos
@@ -261,14 +268,7 @@ function createBarChart(selectedData) {
       .attr('class', 'y-axis')
       .call(d3.axisLeft(yScale));
 
-  // svg.append('text')
-  //     .attr('x', width / 2)
-  //     .attr('y', -margin.top / 2)
-  //     .attr('text-anchor', 'middle')
-  //     .style('font-size', '16px')
-  //     .text('Gráfico de Barras con Transiciones');
 
-  
   svg.append('text')
     .attr('x', width / 2)
     .attr('y', height + margin.bottom+0.2 )
@@ -294,6 +294,8 @@ function createBarChart(selectedData) {
     .style('font-family', 'Comfortaa, sans-serif');
 }
 
+
+
 createBarChart(data);
 
 // Botones para ordenar los datos
@@ -310,3 +312,7 @@ d3.select("#sort-descending")
       const sortedData = data.slice().sort((a, b) => b.promedioPuntajeGlobal - a.promedioPuntajeGlobal);
       createBarChart(sortedData);
   });
+
+  close.addEventListener('click', () => {
+    popUp.classList.toggle('popUpOn')
+})
