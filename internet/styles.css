@@ -1,0 +1,42 @@
+#chart-internet-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+
+
+
+select{
+  padding: 8px;
+  border: #149D3F solid;
+  border-radius: 2rem;
+  background-color: beige;
+  font-family: 'Comfortaa', sans-serif;
+  
+}
+
+
+
+select:focus{
+  outline: none;
+  border: none;
+  background-color: #149D3F;
+  border: #149D3F  solid;
+  color: black;
+}
+
+
+select:hover {
+  cursor: pointer;
+}
+
+select:hover option:hover{
+  border: none;
+  background-color: #149D3F;
+  border: #149D3F  solid;
+  color: black;
+}

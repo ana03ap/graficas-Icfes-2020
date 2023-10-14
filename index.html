@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="colegios/styles.css">
   <link rel="stylesheet" href="mujer-hombre/styles.css">
   <link rel="stylesheet" href="donut/styles.css">
+  <link rel="stylesheet" href="internet/styles.css">
                     <!-- FONTS -->
 <!-- header -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -567,12 +568,26 @@
 </section>
 
 
-<section id="desviacion-materias-depa">
-  <div id="chart-desv">
+<section id="internet">
+  <h1 id="titulo-barras-genero" class ='title'>Promedio de puntajes por departamento según el acceso al servicio de internet.</h1>
+  <hr id="custom-hr">
+  <div id="chart-internet-menu">
 
+    <form action="">
+      <select id="materiaSelector">
+        <option value="dataGlobal">Global</option>
+        <option value="dataMate">Matemáticas</option>
+        <option value="dataNaturales">Naturales</option>
+        <option value="dataSociales">Sociales</option>
+        <option value="dataLectura">Lectura</option>
+        <option value="dataIngles">Inglés</option>
+      </select>
+    </form>
+   
+    <div id="chart-internet"></div>
   </div>
+ 
 </section>
-
   </main>
 
 
@@ -601,8 +616,8 @@
   <script src="circulo-ingles/index.js"></script>
   <script src="donut/index.js"></script>
   <script src="colegios/index.js"></script>
-  <script src="mujer-hombre/index.js"></script>
-  <!-- <script src="desv-materias-depas/index.js"></script> -->
+  <script src="mujer-hombre/index.js"></script> 
+  <script src="internet/index.js"></script>
 </body>
 
 </html>
