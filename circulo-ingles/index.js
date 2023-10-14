@@ -1,7 +1,7 @@
 
 query = "WITH nueva AS (SELECT SUM(CASE WHEN d.desemp_ingles='a-' THEN 1 ELSE 0 END) AS 'Nivel A-',SUM(CASE WHEN d.desemp_ingles='a1' THEN 1 ELSE 0 END) AS 'Nivel A1',SUM(CASE WHEN d.desemp_ingles='a2' THEN 1 ELSE 0 END) AS 'Nivel A2',SUM(CASE WHEN d.desemp_ingles='b1' THEN 1 ELSE 0 END) AS 'Nivel B1',SUM(CASE WHEN d.desemp_ingles='b+' THEN 1 ELSE 0 END) AS 'Nivel B+' FROM dbo.datos d)SELECT * FROM nueva";
 // Agrega el parámetro 'query' a la URL como una cadena de consulta
-url = `http://localhost:3003/api/data?query=${encodeURIComponent(query)}`;
+url = `http://localhost:3004/api/data?query=${encodeURIComponent(query)}`;
 
 fetch(url)
   .then(response => response.json())

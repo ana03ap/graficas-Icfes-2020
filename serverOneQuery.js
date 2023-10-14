@@ -69,7 +69,7 @@ app.get('/api/data', (req, res) => {
   console.log(data)
 });
 
-const PORT = 3003;
+const PORT = 3004;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });

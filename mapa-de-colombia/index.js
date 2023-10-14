@@ -89,7 +89,7 @@ function seleccionarDepartamento(element,data) {
         query = 'select [Depto residencia Estd] ,avg(punt_global) promedioPuntaje  from dbo.datos group by [Depto residencia Estd]';
 
         // Agrega el parámetro 'query' a la URL como una cadena de consulta
-        url = `http://localhost:3003/api/data?query=${encodeURIComponent(query)}`;
+        url = `http://localhost:3004/api/data?query=${encodeURIComponent(query)}`;
 
         fetch(url)
           .then(response => response.json())

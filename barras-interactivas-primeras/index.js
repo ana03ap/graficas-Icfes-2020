@@ -1,7 +1,7 @@
 query = 'select Estrato, avg(punt_global) promedioPuntajeGlobal from dbo.datos group by Estrato  order by promedioPuntajeGlobal';
 
 // Agrega el parámetro 'query' a la URL como una cadena de consulta
-let url = `http://localhost:3003/api/data?query=${encodeURIComponent(query)}`;
+let url = `http://localhost:3004/api/data?query=${encodeURIComponent(query)}`;
 fetch(url)
   .then(response => response.json())
   .then(data => {
@@ -15,25 +15,25 @@ fetch(url)
             const chartContainer = d3.select("#chart");
             chartContainer.selectAll('*').remove(); //inicializa todo, un clear 
 
-            const svgWidth = 900;
-            const svgHeight = 600;
-            const margin = { top: 20, right: 30, bottom: 60, left: 60 };
-            const width = svgWidth - margin.left - margin.right;
-            const height = svgHeight - margin.top - margin.bottom;
+            let svgWidth = 900;
+            let svgHeight = 600;
+            let margin = { top: 20, right: 30, bottom: 60, left: 60 };
+            let width = svgWidth - margin.left - margin.right;
+            let height = svgHeight - margin.top - margin.bottom;
 
-            const svg = chartContainer
+            let svg = chartContainer
                 .append('svg')
                 .attr('width', svgWidth)
                 .attr('height', svgHeight)
                 .append('g')
                 .attr('transform', `translate(${margin.left},${margin.top})`);
 
-            const xScale = d3.scaleBand()
+            let xScale = d3.scaleBand()
                 .domain(selectedData.map(d => d.Estrato))
                 .range([0, width])
                 .padding(0.1);
 
-            const yScale = d3.scaleLinear()
+            let yScale = d3.scaleLinear()
                 .domain([0, d3.max(selectedData, d => d.promedioPuntajeGlobal)])
                 .nice()
                 .range([height, 0]);

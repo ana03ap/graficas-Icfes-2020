@@ -20,7 +20,7 @@
 query = "WITH nueva AS (SELECT SUM(CASE WHEN d.punt_global >= 100 AND d.punt_global < 150 THEN 1 ELSE 0 END) AS '100-150',SUM(CASE WHEN d.punt_global >= 150 AND d.punt_global < 200 THEN 1 ELSE 0 END) AS '150-200',SUM(CASE WHEN d.punt_global >= 200 AND d.punt_global < 250 THEN 1 ELSE 0 END) AS '200-250',SUM(CASE WHEN d.punt_global >= 250 AND d.punt_global < 300 THEN 1 ELSE 0 END) AS '250-300',SUM(CASE WHEN d.punt_global >= 300 AND d.punt_global < 350 THEN 1 ELSE 0 END) AS '300-350',SUM(CASE WHEN d.punt_global >= 350 AND d.punt_global < 400 THEN 1 ELSE 0 END) AS '350-400',SUM(CASE WHEN d.punt_global >= 400 AND d.punt_global <= 450 THEN 1 ELSE 0 END) AS '400-450',SUM(CASE WHEN d.punt_global >= 450 AND d.punt_global <= 500 THEN 1 ELSE 0 END) AS '450-500'FROM dbo.datos d)SELECT *FROM nueva"
 
 // Agrega el parámetro 'query' a la URL como una cadena de consulta
-url = `http://localhost:3003/api/data?query=${encodeURIComponent(query)}`;
+url = `http://localhost:3004/api/data?query=${encodeURIComponent(query)}`;
 
 fetch(url)
   .then(response => response.json())
